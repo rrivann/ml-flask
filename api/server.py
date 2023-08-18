@@ -6,6 +6,15 @@ import pandas as pd
 app = Flask(__name__)
 model = pickle.load(open('modeldiabet.pkl','rb'))
 
+@app.route("/")
+def home():
+    return "Hello World"
+
+
+@app.route("/about")
+def home():
+    return "aboi World"
+
 @app.route('/api',methods=['POST']) 
 def predict():
     data = request.get_json(force=True)
@@ -29,6 +38,3 @@ def predict():
     result = {}
     result['hasil'] = str(output)
     return jsonify(result) 
-
-if __name__ == '__main__':
-    app.run(port=5000, debug=True)
