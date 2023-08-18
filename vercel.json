@@ -2,7 +2,7 @@
     "builds" : [
         {
             "src" : "api/server.py",
-            "use" : "@liudonghua123/now-flask"
+            "use" : "@vercel/python"
         }
     ],
     "routes" : [
