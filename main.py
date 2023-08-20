@@ -10,7 +10,7 @@ model = pickle.load(open('modeldiabet.pkl','rb'))
 def home():
     return "Hello World"
 
-@app.route('/api',methods=['POST']) 
+@app.route('/api', methods=['POST']) 
 def predict():
     data = request.get_json(force=True)
 
@@ -32,6 +32,7 @@ def predict():
     output = prediction['diabetes'].values[0]
     result = {}
     result['hasil'] = str(output)
+    print(result['hasil'])
     return jsonify(result) 
 
 
