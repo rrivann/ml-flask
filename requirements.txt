@@ -2,10 +2,4 @@ numpy
 Flask
 pandas
 pgmpy
-uvicorn
-click
 gunicorn
-itsdangerous
-Jinja2
-MarkupSafe
-Werkzeug
