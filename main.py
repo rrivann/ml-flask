@@ -1,10 +1,10 @@
 import numpy as np
 from flask import Flask, request, jsonify
-import pickle
 import pandas as pd
+import joblib
 
 app = Flask(__name__)
-model = pickle.load(open('modeldiabet.pkl','rb'))
+model = joblib.load(open('modeldiabet.pkl','rb'))
 
 @app.route("/")
 def home():
