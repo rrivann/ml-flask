@@ -2,4 +2,4 @@ numpy
 Flask
 pandas
 gunicorn
-pgmpy==0.1.23
+pgmpy
